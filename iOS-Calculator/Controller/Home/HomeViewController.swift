@@ -320,6 +320,7 @@ final class HomeViewController: UIViewController {
        }
        
       
+    //This function is responsible for marking the operation button as selected when it has been pressed.
        private func selectVisualOperation() {
            
            if !operating {
