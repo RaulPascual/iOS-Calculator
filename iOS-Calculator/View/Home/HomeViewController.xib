@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -38,20 +39,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rlC-V0-Fw0">
-                    <rect key="frame" x="20" y="409.5" width="374" height="472.5"/>
+                    <rect key="frame" x="20" y="369" width="374" height="472.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mkJ-l8-agC">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="78.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ak6-Zf-pBD">
                                     <rect key="frame" x="0.0" y="0.0" width="78.5" height="78.5"/>
-                                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="Ak6-Zf-pBD" secondAttribute="height" multiplier="1:1" id="EmJ-nV-282"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                     <state key="normal" title="AC">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
                                         <action selector="operatorACAction:" destination="-1" eventType="touchUpInside" id="GcW-tK-sdu"/>
@@ -59,13 +60,13 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpe-D4-Iu3">
                                     <rect key="frame" x="98.5" y="0.0" width="78.5" height="78.5"/>
-                                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="dpe-D4-Iu3" secondAttribute="height" multiplier="1:1" id="Act-Hj-gda"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     <state key="normal" title="⁺∕₋">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
                                         <action selector="operatorPlusMinusAction:" destination="-1" eventType="touchUpInside" id="hZU-fN-zgt"/>
@@ -73,13 +74,13 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHM-cR-2hN">
                                     <rect key="frame" x="197" y="0.0" width="78.5" height="78.5"/>
-                                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="xHM-cR-2hN" secondAttribute="height" multiplier="1:1" id="mSa-VN-3HN"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                     <state key="normal" title="%">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
                                         <action selector="operatorPercentAction:" destination="-1" eventType="touchUpInside" id="iXj-Xs-ZUS"/>
@@ -317,6 +318,9 @@
                                             <state key="normal" title="0">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="numberAction:" destination="-1" eventType="touchUpInside" id="aXB-4I-xCw"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -361,9 +365,9 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efW-A2-mEN">
-                    <rect key="frame" x="20" y="250" width="374" height="119.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="efW-A2-mEN">
+                    <rect key="frame" x="20" y="124" width="374" height="170.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -374,11 +378,17 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rlC-V0-Fw0" secondAttribute="trailing" constant="20" id="964-Sg-ORB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="efW-A2-mEN" secondAttribute="trailing" constant="20" id="BAM-4v-xeX"/>
                 <constraint firstItem="efW-A2-mEN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="D2x-rS-Cep"/>
-                <constraint firstItem="rlC-V0-Fw0" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="20" id="PwW-Er-vAb"/>
+                <constraint firstItem="efW-A2-mEN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="O0C-z3-gHP"/>
+                <constraint firstItem="rlC-V0-Fw0" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-20.5" id="PwW-Er-vAb"/>
                 <constraint firstItem="rlC-V0-Fw0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="UES-Qa-nIi"/>
-                <constraint firstItem="rlC-V0-Fw0" firstAttribute="top" secondItem="efW-A2-mEN" secondAttribute="bottom" constant="40" id="W6G-2Y-vzm"/>
+                <constraint firstItem="rlC-V0-Fw0" firstAttribute="top" secondItem="efW-A2-mEN" secondAttribute="bottom" constant="74.5" id="W6G-2Y-vzm"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="107.8125"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

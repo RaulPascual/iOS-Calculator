@@ -56,7 +56,7 @@ final class HomeViewController: UIViewController {
            case none, addiction, substraction, multiplication, division, percent
        }
        
-       
+       // MARK: - Formatters
        private let auxFormatter: NumberFormatter = {
            let formatter = NumberFormatter()
            let locale = Locale.current
@@ -261,7 +261,6 @@ final class HomeViewController: UIViewController {
            let number = sender.tag
            temp = Double(currentTemp + String(number))!
            resultLabel.text = printFormatter.string(from: NSNumber(value: temp))
-           
            selectVisualOperation()
            
            sender.shine()
@@ -289,7 +288,7 @@ final class HomeViewController: UIViewController {
            switch operation {
 
            case .none:
-               // No hacemos nada
+               // nothing
                break
            case .addiction:
                total = total + temp
